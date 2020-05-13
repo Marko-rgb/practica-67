@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>p67</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<input type="text" id="texto" maxlength="50" size="50">
+<br>
+<p>Puedes poner hasta 50 caracteres, no mas!:<span id="cantidad">50</span></p>
+
+<script>
+addEventListener('DOMContentLoaded',inicio,false);
+
+function inicio()
+{
+document.getElementById('texto').addEventListener('keyup',presion,false);
+}
+
+function presion()
+{
+var canti=document.getElementById('texto').value.length;
+var disponibles=50-parseInt(canti);
+document.getElementById('cantidad').innerHTML=disponibles;
+}
+</script>
+
+</body>
+</html>
